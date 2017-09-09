@@ -1,8 +1,13 @@
 import React from 'react'; // Reacts with components
 import ReactDOM from 'react-dom'; // Reacts with the dom
+import YTSearch from 'youtube-api-search';
 import SearchBar from './components/search_bar'; // Import the search bar component
 
 const API_KEY = 'AIzaSyCxaM8_iwrErYJtOdemm4TkDX8uhyhkY6w';
+
+YTSearch({key: API_KEY, term: 'cats'}, function(data) {
+	console.log(data);
+});
 
 // Create a new component. This component should produce some html
 // http://babeljs.io/repl/ will show what the JSX will render
