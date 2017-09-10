@@ -17,6 +17,8 @@ const VideoDetail = ({video}) => {
 			<div className="details">
 				<div>{video.snippet.title}</div>
 				<div>{video.snippet.description}</div>
+				<div>&#128077; {video.likes}</div>
+				<div>&hearts; {video.hearts}</div>
 			</div>
 		</div>
 	);
