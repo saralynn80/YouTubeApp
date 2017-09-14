@@ -9,8 +9,19 @@ const VideoList = (props) => {
 					video={video} />
 	});
 
+	const style = {
+		base: {
+			display: 'flex',
+			flexDirection: 'column',
+			width: '25%',
+			border: '1px solid red',
+			listStyle: 'none',
+			padding: 10
+		}
+	}
+
 	return (
-		<ul className="col-md-4 list-group">
+		<ul style={style.base}>
 			{videoItems}
 		</ul>
 	);

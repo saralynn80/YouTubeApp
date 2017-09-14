@@ -3,15 +3,25 @@ import React from 'react';
 const VideoListItem = ({video, onVideoSelect}) => {
 	const imageUrl = video.snippet.thumbnails.default.url;
 
+	const style = {
+		base: {
+			cursor: 'pointer',
+			lineHeight: 1.3,
+			fontSize: 15,
+			marginBottom: 20
+		},
+		image: {
+			width: '100%',
+			marginBottom: 10
+		}
+	}
 	return (
-		<li onClick={() => onVideoSelect(video)} className="list-group-item">
-			<div className="video-list media">
-				<div className="media-left">
-					<img className="media object" src={imageUrl} />
-				</div>
+		<li style={style.base} className="videoListItem" onClick={() => onVideoSelect(video)}>
+			<div>
+				<img style={style.image} src={imageUrl} />
 
-				<div className="media-body">
-					<div className="media-heading">{video.snippet.title}</div>
+				<div>
+					<div>{video.snippet.title}</div>
 				</div>
 			</div>
 		</li>
